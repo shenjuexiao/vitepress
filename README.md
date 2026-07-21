@@ -1,2 +1,2 @@
 # vitepress
-v.gaishanke.com
+vitepress.shenjuexiao.com
