@@ -1,2 +1,1 @@
-# vitepress
-vitepress.shenjuexiao.com
+# vitepress.shenjuexiao.com
