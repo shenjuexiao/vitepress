@@ -1,5 +1,6 @@
-# 2026-07-24
+# VitePress-Guide-Deploy-GitHub-cn.yml
 # github.com/shenjuexiao
+# 2026-07-24
 
 # vitepress.dev/zh/guide/deploy
 # 部署 VitePress 站点
@@ -59,7 +60,7 @@ jobs:
       - name: Cache VitePress
         uses: actions/cache@v4
         with:
-          path: .vitepress/cache
+          path: docs/.vitepress/cache
           key: ${{ runner.os }}-vitepress-${{ hashFiles('docs/**', 'package-lock.json', 'pnpm-lock.yaml', 'yarn.lock', 'bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-  
@@ -78,7 +79,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
  
  
   # 部署工作
