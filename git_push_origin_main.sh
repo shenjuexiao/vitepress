@@ -5,6 +5,7 @@
 # cd vitepress
 
 # GITEE
+git remote set-url --delete origin git@gitee.com:shenjuexiao/vitepress.git
 git remote set-url --add origin git@gitee.com:shenjuexiao/vitepress.git
 
 # 暂存所有更改
