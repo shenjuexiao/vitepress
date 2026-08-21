@@ -1,10 +1,10 @@
 # VitePress-Guide-Deploy-GitHub-cn.yml
 # github.com/shenjuexiao
-# 20260820
+# 20260821
 
 # vitepress.dev/zh/guide/deploy
 # 部署 VitePress 站点
-
+# vitepress.dev/zh/guide/deploy#github-pages
 # GitHub Pages
 
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
@@ -33,7 +33,6 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-
 jobs:
   # 构建工作
   build:
@@ -44,12 +43,16 @@ jobs:
         with:
           # 如果未启用 lastUpdated，则不需要
           fetch-depth: 0
+          
       # 如果使用 pnpm，请取消此区域注释
-      # - uses: pnpm/action-setup@v4 
-      #   with:
-      #     version: 9
-      # 如果使用 Bun，请取消注释
-      # - uses: oven-sh/setup-bun@v1
+      # - name: Install pnpm
+        # uses: pnpm/action-setup@v4 
+        # with:
+          # version: 9
+      
+      # 如果使用 bun，请取消注释
+      # - name: Install bun
+        # uses: oven-sh/setup-bun@v1
       
       - name: Setup Node
         uses: actions/setup-node@v6
